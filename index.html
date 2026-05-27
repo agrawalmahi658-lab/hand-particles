@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hand-Driven Particle Text — Three.js + MediaPipe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html,body,#app { height:100%; margin:0; }
+      #three-canvas { width:100%; height:100%; display:block; }
+      video#input_video { display:none; }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-slate-100">
+    <div id="app" class="w-full h-full flex flex-col">
+      <header class="p-4 bg-slate-800/50 backdrop-blur flex items-center gap-4">
+        <h1 class="text-lg font-semibold">Hand-Driven Particle Text</h1>
+        <p class="text-sm text-slate-300">Use 0-5 fingers to switch messages; make a fist to repel particles.</p>
+      </header>
+      <main class="flex-1 relative">
+        <canvas id="three-canvas"></canvas>
+        <video id="input_video" autoplay playsinline></video>
+        <div id="overlayText" class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div id="overlayInner" class="text-white text-5xl sm:text-7xl md:text-8xl font-extrabold text-center drop-shadow-lg opacity-90"></div>
+        </div>
+        <div id="hud" class="absolute left-4 top-4 bg-black/40 p-2 rounded text-sm">
+          <div id="detected" class="text-green-300">Show 1-5 fingers to display text in particles, fist to repel.</div>
+        </div>
+      </main>
+      <footer class="p-3 text-xs text-slate-400 bg-slate-800/40">Particles: 15,000 · Three.js · MediaPipe Hands · Tailwind</footer>
+    </div>
+
+    <!-- MediaPipe (non-module scripts expose globals Hands, Camera) -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
