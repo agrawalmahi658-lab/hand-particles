@@ -1,19 +1,136 @@
-# Hand-Driven Particle Text Demo
+# ✋✨ Hand Particles
 
-A minimal interactive demo using Three.js and MediaPipe Hands.
+An interactive computer vision project that allows users to control and manipulate dynamic particle effects using hand gestures in real time.
 
-Usage
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
 
-- Open `index.html` in a modern browser (Chrome/Edge). For webcam access, serve the folder over a local web server (e.g. `npx http-server` or `python -m http.server`).
-- Allow webcam access when prompted.
-- Show 1–5 fingers to morph particles into the corresponding text (`ONE`..`FIVE`). Make a fist to repel particles.
+---
 
-Files
+## 🚀 Overview
 
-- `index.html` — App shell, includes Tailwind and MediaPipe scripts.
-- `src/main.js` — Three.js scene, particle system, MediaPipe integration.
+Hand Particles is a real-time interactive visual experience that combines computer vision, hand tracking, and particle simulation.
 
-Notes
+Using a webcam, the system detects hand movements and allows users to interact with thousands of particles naturally through gestures.
 
-- This demo uses CDN builds for Three.js and MediaPipe; no install required.
-- For best performance use a desktop browser and allow camera resolution 720p+.
+---
+
+## ✨ Features
+
+- ✋ Real-time Hand Tracking
+- 🎥 Webcam-Based Interaction
+- ✨ Dynamic Particle Simulation
+- 🖐 Gesture-Based Controls
+- ⚡ Smooth Visual Effects
+- 🎨 Interactive Digital Art Experience
+- 📱 Lightweight & Responsive
+
+---
+
+## 🎯 How It Works
+
+1. Webcam captures live video.
+2. Hand landmarks are detected.
+3. Finger positions are tracked.
+4. Particles respond to hand movement.
+5. Users can push, attract, scatter, or manipulate particles using gestures.
+
+---
+
+## 🛠 Tech Stack
+
+### Languages
+- Python
+
+### Libraries
+- OpenCV
+- MediaPipe
+- NumPy
+- Pygame / PyOpenGL (if used)
+
+### Computer Vision
+- Hand Landmark Detection
+- Gesture Recognition
+
+---
+
+## 📂 Project Structure
+
+```bash
+Hand-Particles/
+│
+├── assets/
+├── particle_system/
+├── hand_tracking/
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/hand-particles.git
+
+cd hand-particles
+
+pip install -r requirements.txt
+
+python main.py
+```
+
+## 🎮 Controls
+
+| Action | Gesture |
+|----------|----------|
+| Move Particles | Move Hand |
+| Attract Particles | Open Palm |
+| Scatter Particles | Quick Hand Motion |
+| Create Effect | Finger Gesture |
+
+## 📸 Screenshots
+
+### Hand Tracking
+![Hand Tracking](screenshots/hand_tracking.png)
+
+### Particle Interaction
+![Particles](screenshots/particles.png)
+
+### Live Demo
+![Demo](screenshots/demo.png)
+
+---
+
+## 🔮 Future Improvements
+
+- Multi-Hand Support
+- Advanced Gesture Recognition
+- 3D Particle System
+- AI Gesture Prediction
+- AR Integration
+- Custom Particle Effects
+
+---
+
+## 🎯 Applications
+
+- Interactive Art
+- Education
+- Computer Vision Learning
+- Human-Computer Interaction
+- Creative Coding Projects
+
+---
+
+## 👨‍💻 Author
+
+**Mahi Agrawal**
+
+Bioengineering Student • AI Developer • Computer Vision Enthusiast
+
+---
+
+## ⭐ Support
+
+If you found this project interesting, consider giving it a star ⭐.
